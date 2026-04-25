@@ -139,9 +139,9 @@ public class ModifierInstances {
             instances.put(id, new ModifierInstance(
                     stat, id, entry.getValue(), Operation.ADD,
                     SkillItem.getBaseItem(entry.getKey(), user.getPlugin()),
-                    entry.getKey().getDisplayName(user.getLocale()),
+                    entry.getKey().getDisplayName(user.getLocale(), false),
                     plugin.getMsg(MenuMessage.STAT_REWARD_DESC, user.getLocale()).replace("{skill}",
-                            entry.getKey().getDisplayName(user.getLocale())),
+                            entry.getKey().getDisplayName(user.getLocale(), false)),
                     index
             ));
             index++;
